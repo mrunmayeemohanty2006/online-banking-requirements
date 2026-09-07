@@ -1,0 +1,1078 @@
+{
+  "project": "Online Banking Application",
+  "project_code": "ONLINE-BANKING",
+  "artifact": "FRD",
+  "version": "1.0",
+  "status": "RAW",
+  "ready_for_human_review": true,
+  "approval_status": "NOT_APPROVED",
+  "generated_at": "2026-09-07T00:00:00Z",
+  "generator_agent": "FRD Agent",
+  "source_basis": [
+    "brd/raw/brd.json",
+    "brd/raw/business_rules.json",
+    "brd/raw/open_questions.json"
+  ],
+  "artifact_name": "Functional Requirements Document",
+  "document_status_note": "RAW - READY_FOR_HUMAN_REVIEW",
+  "introduction": {
+    "purpose": "This Functional Requirements Document (FRD) translates the approved business requirements of the Online Banking Application into precise, testable functional requirements. It is derived exclusively from the RAW BRD artifacts and maintains BR-to-FR traceability.",
+    "scope": "This FRD covers the functional behaviour required by BR-001 through BR-023. It does not prescribe technical implementation: it names no APIs, databases, authentication mechanisms, or infrastructure.",
+    "audience": [
+      "Architecture and Development teams",
+      "Quality Assurance and Testing teams",
+      "UAT teams",
+      "Defect Root Cause Analysis teams",
+      "Human reviewers and approvers of functional requirements"
+    ]
+  },
+  "requirements": [
+    {
+      "id": "FR-001",
+      "title": "Customer Completes Onboarding",
+      "description": "The system shall allow a customer to complete onboarding.",
+      "source_business_requirement": "BR-001",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "A customer exists and has initiated the onboarding journey."
+      ],
+      "trigger": "The customer initiates onboarding.",
+      "functional_behavior": [
+        "The system shall make available an onboarding journey to a customer.",
+        "The system shall accept the information required for onboarding.",
+        "The system shall allow the customer to complete the onboarding journey."
+      ],
+      "business_rules": [],
+      "inputs": [
+        "Customer-supplied onboarding information."
+      ],
+      "outputs": [
+        "An onboarding completion state/record for the customer."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If onboarding cannot be completed, the system shall surface a relevant error. Exact error codes and messages are unresolved (see OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-005",
+        "OQ-012",
+        "OQ-013"
+      ]
+    },
+    {
+      "id": "FR-002",
+      "title": "Customer Provides KYC Information",
+      "description": "The system shall allow a customer to provide KYC information.",
+      "source_business_requirement": "BR-002",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "The customer is progressing through onboarding."
+      ],
+      "trigger": "The customer provides KYC information.",
+      "functional_behavior": [
+        "The system shall accept KYC information from the customer.",
+        "KYC information is captured for the simulation; it is not verified against any real authority."
+      ],
+      "business_rules": [
+        "Business rule BR-002 (simulated identity verification; Aadhaar/PAN format-only and mocked).",
+        "Constraint CON-003 (format-only, mocked identity verification).",
+        "Constraint CON-005 (no external KYC integration)."
+      ],
+      "inputs": [
+        "Customer KYC information."
+      ],
+      "outputs": [
+        "A stored record of the customer's KYC information."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If KYC information cannot be accepted, the system shall surface a relevant error. Exact validation constraints and error text are unresolved (see OQ-012, OQ-013)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-012",
+        "OQ-013"
+      ]
+    },
+    {
+      "id": "FR-003",
+      "title": "Customer Provides Aadhaar and PAN Information",
+      "description": "The system shall allow a customer to provide Aadhaar and PAN information. Verification of Aadhaar/PAN is format-only and mocked.",
+      "source_business_requirement": "BR-003",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "The customer is providing KYC information during onboarding."
+      ],
+      "trigger": "The customer provides Aadhaar and/or PAN information.",
+      "functional_behavior": [
+        "The system shall accept Aadhaar and PAN information from the customer.",
+        "Aadhaar/PAN verification performed by the system, if any, shall be format-only and mocked.",
+        "The system shall not perform real identity verification against any external authority."
+      ],
+      "business_rules": [
+        "Business rule BR-002 (Aadhaar/PAN verification is format-only and mocked).",
+        "Constraint CON-003 (format-only, mocked identity verification).",
+        "Constraint CON-005 (no external KYC integration)."
+      ],
+      "inputs": [
+        "Customer Aadhaar information.",
+        "Customer PAN information."
+      ],
+      "outputs": [
+        "A stored record of the customer's Aadhaar/PAN information."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If Aadhaar/PAN information is not in the expected format, the system shall surface a relevant error. Exact format rules and error text are unresolved (see OQ-012, OQ-013)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-012",
+        "OQ-013"
+      ]
+    },
+    {
+      "id": "FR-004",
+      "title": "Customer Activates an Account",
+      "description": "The system shall allow a customer to activate an account.",
+      "source_business_requirement": "BR-004",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "The customer has an account associated with their profile."
+      ],
+      "trigger": "The customer, or bank operations on the customer's behalf, initiates account activation.",
+      "functional_behavior": [
+        "The system shall allow a customer account to be activated.",
+        "Account activation shall result in an account state that reflects the activation."
+      ],
+      "business_rules": [
+        "Business rule BR-006 (state changes must be auditable)."
+      ],
+      "inputs": [
+        "Account activation request."
+      ],
+      "outputs": [
+        "An account whose state reflects activation.",
+        "An audit record of the state change."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If account activation cannot be performed, the system shall surface a relevant error. Exact account-state rules and error text are unresolved (see OQ-006, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-006",
+        "OQ-012",
+        "OQ-013"
+      ]
+    },
+    {
+      "id": "FR-005",
+      "title": "Customer Login",
+      "description": "The system shall allow a customer to log in.",
+      "source_business_requirement": "BR-005",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "The customer has a registered identity in the system."
+      ],
+      "trigger": "The customer initiates login.",
+      "functional_behavior": [
+        "The system shall allow a customer to log in.",
+        "Login shall provide the customer access consistent with role-based access requirements (see FR-019)."
+      ],
+      "business_rules": [
+        "Business rule BR-005 (two distinct roles: Customer and Bank Operations, with role-based access)."
+      ],
+      "inputs": [
+        "Customer login credentials/request."
+      ],
+      "outputs": [
+        "An authenticated customer session."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If login fails, the system shall surface a relevant error. Exact authentication rules and error text are unresolved (see OQ-009, OQ-010, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-009",
+        "OQ-010",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-006",
+      "title": "Customer Logout",
+      "description": "The system shall allow a customer to log out.",
+      "source_business_requirement": "BR-006",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "The customer has an active session."
+      ],
+      "trigger": "The customer initiates logout.",
+      "functional_behavior": [
+        "The system shall allow a customer to log out.",
+        "Logout shall terminate the customer session."
+      ],
+      "business_rules": [],
+      "inputs": [
+        "Customer logout request."
+      ],
+      "outputs": [
+        "A terminated customer session."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If logout cannot be completed, the system shall surface a relevant error. Exact error text is unresolved (see OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-007",
+      "title": "Customer Transfers Simulated Money",
+      "description": "The system shall allow a customer to transfer simulated money.",
+      "source_business_requirement": "BR-007",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "The customer has an active session and an account in a state that permits transfer."
+      ],
+      "trigger": "The customer initiates a transfer of simulated money.",
+      "functional_behavior": [
+        "The system shall allow a customer to initiate a transfer of simulated money.",
+        "Money movement is simulated using synthetic data; no real money moves."
+      ],
+      "business_rules": [
+        "Business rule BR-001 (money movement is simulated using synthetic data).",
+        "Constraint CON-002 (real money movement is not permitted).",
+        "Constraint CON-004 (credit decisioning is not permitted).",
+        "Constraint CON-005 (no production bank integration or real payment gateways)."
+      ],
+      "inputs": [
+        "Transfer/payment request details."
+      ],
+      "outputs": [
+        "A simulated payment/transfer record and resulting balance change."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If a transfer cannot be completed, the system shall surface a relevant error. Exact transfer/payment rules, limits, and error text are unresolved (see OQ-007, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-007",
+        "OQ-012",
+        "OQ-013"
+      ]
+    },
+    {
+      "id": "FR-008",
+      "title": "Customer Receives Simulated Money",
+      "description": "The system shall allow a customer to receive simulated money.",
+      "source_business_requirement": "BR-008",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "The customer has an account in a state that permits receipt."
+      ],
+      "trigger": "Simulated money is received for the customer.",
+      "functional_behavior": [
+        "The system shall allow a customer to receive simulated money.",
+        "Money movement is simulated using synthetic data; no real money moves."
+      ],
+      "business_rules": [
+        "Business rule BR-001 (money movement is simulated using synthetic data).",
+        "Constraint CON-002 (real money movement is not permitted).",
+        "Constraint CON-005 (no production bank integration or real payment gateways)."
+      ],
+      "inputs": [
+        "Incoming simulated payment/transfer details."
+      ],
+      "outputs": [
+        "A simulated payment/transfer record and resulting balance change."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If receipt cannot be recorded, the system shall surface a relevant error. Exact transfer/payment rules and error text are unresolved (see OQ-007, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-007",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-009",
+      "title": "Customer Views Statements",
+      "description": "The system shall allow a customer to view statements.",
+      "source_business_requirement": "BR-009",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "The customer has an active session and an account with statement data."
+      ],
+      "trigger": "The customer requests to view a statement.",
+      "functional_behavior": [
+        "The system shall allow a customer to view statements."
+      ],
+      "business_rules": [
+        "Constraint CON-001 (educational simulation, not a production banking system)."
+      ],
+      "inputs": [
+        "Statement-viewing request."
+      ],
+      "outputs": [
+        "A statement presented to the customer."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If a statement cannot be presented, the system shall surface a relevant error. Exact statement content and error text are unresolved (see OQ-008, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-008",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-010",
+      "title": "Customer Downloads Statements",
+      "description": "The system shall allow a customer to download statements.",
+      "source_business_requirement": "BR-010",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "The customer has an active session and an account with statement data."
+      ],
+      "trigger": "The customer requests to download a statement.",
+      "functional_behavior": [
+        "The system shall allow a customer to download statements."
+      ],
+      "business_rules": [
+        "Constraint CON-001 (educational simulation, not a production banking system)."
+      ],
+      "inputs": [
+        "Statement-download request."
+      ],
+      "outputs": [
+        "A downloadable statement artifact for the customer."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If a statement cannot be downloaded, the system shall surface a relevant error. Exact download behaviour and error text are unresolved (see OQ-008, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-008",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-011",
+      "title": "Bank Operations Reviews KYC",
+      "description": "The system shall allow bank operations to review KYC information.",
+      "source_business_requirement": "BR-011",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "Bank operations has an active session and the required role-based access."
+      ],
+      "trigger": "Bank operations requests to review a customer's KYC information.",
+      "functional_behavior": [
+        "The system shall allow bank operations to review KYC information."
+      ],
+      "business_rules": [
+        "Business rule BR-005 (two distinct roles with role-based access)."
+      ],
+      "inputs": [
+        "A KYC review request identifying the customer."
+      ],
+      "outputs": [
+        "KYC information presented to bank operations."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If KYC information cannot be presented, the system shall surface a relevant error. Exact error text is unresolved (see OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-009",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-012",
+      "title": "Bank Operations Sets KYC Status",
+      "description": "The system shall allow bank operations to set KYC status.",
+      "source_business_requirement": "BR-012",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "Bank operations has an active session, the required role-based access, and has reviewed the KYC information."
+      ],
+      "trigger": "Bank operations sets the KYC status for a customer.",
+      "functional_behavior": [
+        "The system shall allow bank operations to set the KYC status of a customer."
+      ],
+      "business_rules": [
+        "Business rule BR-006 (state changes must be auditable)."
+      ],
+      "inputs": [
+        "A KYC status update for a customer."
+      ],
+      "outputs": [
+        "An updated KYC status for the customer.",
+        "An audit record of the state change."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If the KYC status cannot be updated, the system shall surface a relevant error. Exact status values and error text are unresolved (see OQ-012, OQ-013)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-009",
+        "OQ-012",
+        "OQ-013"
+      ]
+    },
+    {
+      "id": "FR-013",
+      "title": "Bank Operations Activates Customer Accounts",
+      "description": "The system shall allow bank operations to activate customer accounts.",
+      "source_business_requirement": "BR-013",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "Bank operations has an active session and the required role-based access."
+      ],
+      "trigger": "Bank operations initiates activation of a customer account.",
+      "functional_behavior": [
+        "The system shall allow bank operations to activate a customer account."
+      ],
+      "business_rules": [
+        "Business rule BR-006 (state changes must be auditable)."
+      ],
+      "inputs": [
+        "An account-activation request from bank operations."
+      ],
+      "outputs": [
+        "A customer account whose state reflects activation.",
+        "An audit record of the state change."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If the account cannot be activated, the system shall surface a relevant error. Exact account-state rules and error text are unresolved (see OQ-006, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-006",
+        "OQ-009",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-014",
+      "title": "Bank Operations Freezes Customer Accounts",
+      "description": "The system shall allow bank operations to freeze customer accounts.",
+      "source_business_requirement": "BR-014",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "Bank operations has an active session and the required role-based access."
+      ],
+      "trigger": "Bank operations initiates a freeze of a customer account.",
+      "functional_behavior": [
+        "The system shall allow bank operations to freeze a customer account.",
+        "A frozen account shall reflect the frozen state."
+      ],
+      "business_rules": [
+        "Business rule BR-006 (state changes must be auditable)."
+      ],
+      "inputs": [
+        "An account-freeze request from bank operations."
+      ],
+      "outputs": [
+        "A customer account whose state reflects a freeze.",
+        "An audit record of the state change."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If the account cannot be frozen, the system shall surface a relevant error. Exact account-state rules and error text are unresolved (see OQ-006, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-006",
+        "OQ-009",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-015",
+      "title": "Bank Operations Views Customer Account State",
+      "description": "The system shall allow bank operations to view customer account state.",
+      "source_business_requirement": "BR-015",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "Bank operations has an active session and the required role-based access."
+      ],
+      "trigger": "Bank operations requests to view a customer's account state.",
+      "functional_behavior": [
+        "The system shall allow bank operations to view the state of a customer account."
+      ],
+      "business_rules": [
+        "Business rule BR-005 (two distinct roles with role-based access)."
+      ],
+      "inputs": [
+        "An account-state view request identifying the customer/account."
+      ],
+      "outputs": [
+        "Customer account state presented to bank operations."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If the account state cannot be presented, the system shall surface a relevant error. Exact error text is unresolved (see OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-006",
+        "OQ-009",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-016",
+      "title": "Bank Operations Accesses the Audit Trail",
+      "description": "The system shall allow bank operations to access the audit trail.",
+      "source_business_requirement": "BR-016",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "Bank operations has an active session and the required role-based access."
+      ],
+      "trigger": "Bank operations requests access to the audit trail.",
+      "functional_behavior": [
+        "The system shall allow bank operations to access the audit trail."
+      ],
+      "business_rules": [
+        "Business rule BR-006 (state changes must be auditable).",
+        "Business rule BR-005 (two distinct roles with role-based access)."
+      ],
+      "inputs": [
+        "An audit-trail access request."
+      ],
+      "outputs": [
+        "Audit trail information presented to bank operations."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If the audit trail cannot be accessed, the system shall surface a relevant error. Exact audit events and error text are unresolved (see OQ-011, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-011",
+        "OQ-009",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-017",
+      "title": "Bank Operations Login",
+      "description": "The system shall allow bank operations to log in.",
+      "source_business_requirement": "BR-017",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "Bank operations has a registered identity in the system."
+      ],
+      "trigger": "Bank operations initiates login.",
+      "functional_behavior": [
+        "The system shall allow bank operations to log in.",
+        "Login shall provide bank operations access consistent with role-based access requirements (see FR-019)."
+      ],
+      "business_rules": [
+        "Business rule BR-005 (two distinct roles: Customer and Bank Operations, with role-based access)."
+      ],
+      "inputs": [
+        "Bank-operations login credentials/request."
+      ],
+      "outputs": [
+        "An authenticated bank-operations session."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If login fails, the system shall surface a relevant error. Exact authentication rules and error text are unresolved (see OQ-009, OQ-010, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-009",
+        "OQ-010",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-018",
+      "title": "Bank Operations Logout",
+      "description": "The system shall allow bank operations to log out.",
+      "source_business_requirement": "BR-018",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "Bank operations has an active session."
+      ],
+      "trigger": "Bank operations initiates logout.",
+      "functional_behavior": [
+        "The system shall allow bank operations to log out.",
+        "Logout shall terminate the bank-operations session."
+      ],
+      "business_rules": [],
+      "inputs": [
+        "Bank-operations logout request."
+      ],
+      "outputs": [
+        "A terminated bank-operations session."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If logout cannot be completed, the system shall surface a relevant error. Exact error text is unresolved (see OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-019",
+      "title": "Role-Based Access",
+      "description": "The system shall provide role-based access so that customer and bank-operations journeys are kept distinct.",
+      "source_business_requirement": "BR-019",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "The system has defined roles for Customer and Bank Operations."
+      ],
+      "trigger": "A user (Customer or Bank Operations) attempts to perform an action in the system.",
+      "functional_behavior": [
+        "The system shall keep customer and bank-operations journeys distinct through role-based access.",
+        "Actions available to a user shall be consistent with the user's role."
+      ],
+      "business_rules": [
+        "Business rule BR-005 (two distinct roles: Customer and Bank Operations, with role-based access)."
+      ],
+      "inputs": [
+        "A user action request carrying role context."
+      ],
+      "outputs": [
+        "Access granted or denied consistent with the user's role."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If a user attempts an action not permitted for their role, the system shall surface a relevant error. Exact role permissions and error text are unresolved (see OQ-009, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-009",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-020",
+      "title": "Auditable State Changes",
+      "description": "The system shall make state changes auditable.",
+      "source_business_requirement": "BR-020",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "A state change occurs in the system."
+      ],
+      "trigger": "A state change is performed (for example, account activation, account freeze, or KYC status update).",
+      "functional_behavior": [
+        "The system shall record state changes so that they are auditable."
+      ],
+      "business_rules": [
+        "Business rule BR-006 (state changes in the system must be auditable)."
+      ],
+      "inputs": [
+        "State change event information."
+      ],
+      "outputs": [
+        "An audit record of the state change, accessible via the audit trail (see FR-016)."
+      ],
+      "validation": [],
+      "error_behavior": [
+        "If a state change cannot be recorded for audit, the system shall surface a relevant error. Exact audit events and error text are unresolved (see OQ-011, OQ-012)."
+      ],
+      "acceptance_reference": [],
+      "related_open_questions": [
+        "OQ-011",
+        "OQ-012"
+      ]
+    },
+    {
+      "id": "FR-021",
+      "title": "Synthetic Data Simulation",
+      "description": "The system shall use synthetic identities, accounts, balances, beneficiaries, and payments for the simulation.",
+      "source_business_requirement": "BR-021",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "The simulation operates with synthetic data."
+      ],
+      "trigger": "The simulation instantiates identities, accounts, balances, beneficiaries, or payments.",
+      "functional_behavior": [
+        "The system shall use synthetic identities, accounts, balances, beneficiaries, and payments.",
+        "The system shall not use real money, real identity verification, or real banking integration."
+      ],
+      "business_rules": [
+        "Business rule BR-001 (money movement is simulated using synthetic data).",
+        "Business rule BR-002 (Aadhaar/PAN verification is format-only and mocked).",
+        "Business rule BR-004 (no production bank, real payment gateway, or external KYC integration).",
+        "Constraints CON-001 through CON-005."
+      ],
+      "inputs": [
+        "Synthetic simulation data."
+      ],
+      "outputs": [
+        "A coherent simulation populated with synthetic data."
+      ],
+      "validation": [],
+      "error_behavior": [],
+      "acceptance_reference": [],
+      "related_open_questions": []
+    },
+    {
+      "id": "FR-022",
+      "title": "Agent Artifact Quality",
+      "description": "Agent-produced artifacts shall be reviewable, reproducible, schema-valid, source-linked, and subject to human approval.",
+      "source_business_requirement": "BR-022",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "An agent produces an artifact."
+      ],
+      "trigger": "An agent produces or delivers an artifact.",
+      "functional_behavior": [
+        "Agent-produced artifacts shall be reviewable, reproducible, schema-valid, source-linked, and subject to human approval."
+      ],
+      "business_rules": [
+        "Business rule BR-007 (out-of-scope requirements go through change control).",
+        "Business rule BR-008 (each handoff carries version, source IDs, assumptions, open questions, and approval status)."
+      ],
+      "inputs": [
+        "Artifact content and metadata."
+      ],
+      "outputs": [
+        "A reviewable, reproducible, schema-valid, source-linked artifact."
+      ],
+      "validation": [
+        "Artifact is schema-valid.",
+        "Artifact is source-linked.",
+        "Artifact records version, status, and approval status."
+      ],
+      "error_behavior": [],
+      "acceptance_reference": [],
+      "related_open_questions": []
+    },
+    {
+      "id": "FR-023",
+      "title": "Requirements Traceability",
+      "description": "Approved business rules shall remain traceable through requirements and downstream evidence.",
+      "source_business_requirement": "BR-023",
+      "priority": "UNSPECIFIED",
+      "preconditions": [
+        "BRD artifacts record source-to-requirement mappings."
+      ],
+      "trigger": "Downstream requirements or evidence are produced from business requirements.",
+      "functional_behavior": [
+        "Approved business rules shall remain traceable through requirements, design, implementation, test, defect decision, and final evidence record."
+      ],
+      "business_rules": [
+        "Business rule BR-008 (every handoff carries version, source IDs, assumptions, open questions, and approval status)."
+      ],
+      "inputs": [
+        "Tracing information linking downstream artifacts to approved business requirements/rules."
+      ],
+      "outputs": [
+        "Traceable downstream artifacts (FRD, UAT, evidence records)."
+      ],
+      "validation": [
+        "Every functional requirement traces to an approved business requirement.",
+        "No orphan functional requirements exist.",
+        "No unknown business-requirement references exist."
+      ],
+      "error_behavior": [],
+      "acceptance_reference": [],
+      "related_open_questions": []
+    }
+  ],
+  "traceability": [
+    {
+      "business_requirement": "BR-001",
+      "functional_requirement": "FR-001"
+    },
+    {
+      "business_requirement": "BR-002",
+      "functional_requirement": "FR-002"
+    },
+    {
+      "business_requirement": "BR-003",
+      "functional_requirement": "FR-003"
+    },
+    {
+      "business_requirement": "BR-004",
+      "functional_requirement": "FR-004"
+    },
+    {
+      "business_requirement": "BR-005",
+      "functional_requirement": "FR-005"
+    },
+    {
+      "business_requirement": "BR-006",
+      "functional_requirement": "FR-006"
+    },
+    {
+      "business_requirement": "BR-007",
+      "functional_requirement": "FR-007"
+    },
+    {
+      "business_requirement": "BR-008",
+      "functional_requirement": "FR-008"
+    },
+    {
+      "business_requirement": "BR-009",
+      "functional_requirement": "FR-009"
+    },
+    {
+      "business_requirement": "BR-010",
+      "functional_requirement": "FR-010"
+    },
+    {
+      "business_requirement": "BR-011",
+      "functional_requirement": "FR-011"
+    },
+    {
+      "business_requirement": "BR-012",
+      "functional_requirement": "FR-012"
+    },
+    {
+      "business_requirement": "BR-013",
+      "functional_requirement": "FR-013"
+    },
+    {
+      "business_requirement": "BR-014",
+      "functional_requirement": "FR-014"
+    },
+    {
+      "business_requirement": "BR-015",
+      "functional_requirement": "FR-015"
+    },
+    {
+      "business_requirement": "BR-016",
+      "functional_requirement": "FR-016"
+    },
+    {
+      "business_requirement": "BR-017",
+      "functional_requirement": "FR-017"
+    },
+    {
+      "business_requirement": "BR-018",
+      "functional_requirement": "FR-018"
+    },
+    {
+      "business_requirement": "BR-019",
+      "functional_requirement": "FR-019"
+    },
+    {
+      "business_requirement": "BR-020",
+      "functional_requirement": "FR-020"
+    },
+    {
+      "business_requirement": "BR-021",
+      "functional_requirement": "FR-021"
+    },
+    {
+      "business_requirement": "BR-022",
+      "functional_requirement": "FR-022"
+    },
+    {
+      "business_requirement": "BR-023",
+      "functional_requirement": "FR-023"
+    }
+  ],
+  "traceability_matrix": {
+    "BR-001": [
+      "FR-001"
+    ],
+    "BR-002": [
+      "FR-002"
+    ],
+    "BR-003": [
+      "FR-003"
+    ],
+    "BR-004": [
+      "FR-004"
+    ],
+    "BR-005": [
+      "FR-005"
+    ],
+    "BR-006": [
+      "FR-006"
+    ],
+    "BR-007": [
+      "FR-007"
+    ],
+    "BR-008": [
+      "FR-008"
+    ],
+    "BR-009": [
+      "FR-009"
+    ],
+    "BR-010": [
+      "FR-010"
+    ],
+    "BR-011": [
+      "FR-011"
+    ],
+    "BR-012": [
+      "FR-012"
+    ],
+    "BR-013": [
+      "FR-013"
+    ],
+    "BR-014": [
+      "FR-014"
+    ],
+    "BR-015": [
+      "FR-015"
+    ],
+    "BR-016": [
+      "FR-016"
+    ],
+    "BR-017": [
+      "FR-017"
+    ],
+    "BR-018": [
+      "FR-018"
+    ],
+    "BR-019": [
+      "FR-019"
+    ],
+    "BR-020": [
+      "FR-020"
+    ],
+    "BR-021": [
+      "FR-021"
+    ],
+    "BR-022": [
+      "FR-022"
+    ],
+    "BR-023": [
+      "FR-023"
+    ]
+  },
+  "carried_forward_open_questions": [
+    {
+      "id": "OQ-001",
+      "question": "Who executes UAT and signs off business acceptance?",
+      "status": "OPEN",
+      "source": [
+        "CHARTER-8",
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-002",
+      "question": "What is the minimum balance value?",
+      "status": "OPEN",
+      "source": [
+        "CHARTER-8",
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-003",
+      "question": "What is the daily transfer cap?",
+      "status": "OPEN",
+      "source": [
+        "CHARTER-8",
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-004",
+      "question": "Is the data-testid convention confirmed with the development team?",
+      "status": "OPEN",
+      "source": [
+        "AGENTS (Open Questions)"
+      ]
+    },
+    {
+      "id": "OQ-005",
+      "question": "What are the exact onboarding workflow and validation rules?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-006",
+      "question": "What are the exact account operations and account-state rules?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-007",
+      "question": "What are the exact transfer/payment rules and limits?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-008",
+      "question": "What are the statement content and download behaviour details?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-009",
+      "question": "What are the exact role permissions and authorization rules?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-3",
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-010",
+      "question": "What are the detailed security, privacy, accessibility, and testability requirements?",
+      "status": "OPEN",
+      "source": [
+        "CHARTER-8",
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-011",
+      "question": "What are the exact audit events to be recorded?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-012",
+      "question": "What are the error codes and error messages?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-013",
+      "question": "What are the data fields and validation constraints?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    }
+  ],
+  "consistency_notes": [
+    "The BRD business-rule artifact and the BRD document both use the ID prefix BR- for business rules (BR-001..BR-008), which is distinct from but identical-in-prefix to the business-requirement IDs (BR-001..BR-023). The convention is preserved verbatim from the approved source; no rewrite was made.",
+    "All open questions OQ-001 through OQ-013 are carried forward from the BRD; none were silently resolved.",
+    "ERR-016 intentionally traces to FR-006 (source BR-006, customer logout), which is noted because it also covers FR-018 (bank-operations logout). This is an explicit consistency note, not an invented requirement.",
+    "No missing FR references were detected in the approved source material."
+  ]
+}

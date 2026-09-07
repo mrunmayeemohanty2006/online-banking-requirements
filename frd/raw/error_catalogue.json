@@ -1,0 +1,294 @@
+{
+  "project": "Online Banking Application",
+  "project_code": "ONLINE-BANKING",
+  "artifact": "ERROR_CATALOGUE",
+  "version": "1.0",
+  "status": "RAW",
+  "ready_for_human_review": true,
+  "approval_status": "NOT_APPROVED",
+  "generated_at": "2026-09-07T00:00:00Z",
+  "generator_agent": "FRD Agent",
+  "source_basis": [
+    "brd/raw/brd.json",
+    "brd/raw/business_rules.json",
+    "brd/raw/open_questions.json"
+  ],
+  "artifact_name": "Error Catalogue",
+  "document_status_note": "RAW - READY_FOR_HUMAN_REVIEW",
+  "introduction": {
+    "purpose": "This Error Catalogue documents validation and business errors derived from the FRD and the underlying BRD.",
+    "scope": "Each error traces to a functional requirement and, through it, to a business requirement. Exact error codes and messages are treated as unresolved because the source material leaves them open (OQ-012).",
+    "audience": [
+      "Architecture and Development teams",
+      "Quality Assurance and Testing teams",
+      "Defect Root Cause Analysis teams",
+      "Human reviewers and approvers of functional requirements"
+    ]
+  },
+  "errors": [
+    {
+      "id": "ERR-001",
+      "title": "Onboarding cannot be completed",
+      "description": "A customer is unable to complete the onboarding journey.",
+      "related_fr": "FR-001",
+      "source_business_requirement": "BR-001",
+      "severity": "UNSPECIFIED",
+      "condition": "Onboarding cannot be completed or accepted by the system.",
+      "expected_behavior": "The system shall surface a relevant error to the customer.",
+      "notes": "Exact error codes/messages are unresolved (see OQ-012); exact onboarding workflow and validation rules are unresolved (see OQ-005)."
+    },
+    {
+      "id": "ERR-002",
+      "title": "KYC information cannot be accepted",
+      "description": "KYC information provided by a customer cannot be accepted.",
+      "related_fr": "FR-002",
+      "source_business_requirement": "BR-002",
+      "severity": "UNSPECIFIED",
+      "condition": "KYC information cannot be accepted or recorded.",
+      "expected_behavior": "The system shall surface a relevant error to the customer.",
+      "notes": "Exact validation constraints and error text are unresolved (see OQ-012, OQ-013)."
+    },
+    {
+      "id": "ERR-003",
+      "title": "Aadhaar/PAN information fails format validation",
+      "description": "Aadhaar/PAN information provided by a customer does not conform to the expected format.",
+      "related_fr": "FR-003",
+      "source_business_requirement": "BR-003",
+      "severity": "UNSPECIFIED",
+      "condition": "Aadhaar/PAN information fails format-only, mocked validation.",
+      "expected_behavior": "The system shall surface a relevant error to the customer.",
+      "notes": "Format is format-only and mocked (CON-003). Exact format rules and error text are unresolved (see OQ-012, OQ-013)."
+    },
+    {
+      "id": "ERR-004",
+      "title": "Account activation cannot be performed",
+      "description": "A customer account cannot be activated.",
+      "related_fr": "FR-004",
+      "source_business_requirement": "BR-004",
+      "severity": "UNSPECIFIED",
+      "condition": "Account activation fails or is not permitted.",
+      "expected_behavior": "The system shall surface a relevant error to the requesting user.",
+      "notes": "Exact account-state rules and error text are unresolved (see OQ-006, OQ-012)."
+    },
+    {
+      "id": "ERR-005",
+      "title": "Customer login fails",
+      "description": "A customer cannot log in.",
+      "related_fr": "FR-005",
+      "source_business_requirement": "BR-005",
+      "severity": "UNSPECIFIED",
+      "condition": "Customer login fails, including invalid credentials or unauthorized access.",
+      "expected_behavior": "The system shall surface a relevant error to the customer.",
+      "notes": "Exact authentication and authorization rules and error text are unresolved (see OQ-009, OQ-010, OQ-012)."
+    },
+    {
+      "id": "ERR-006",
+      "title": "Transfer of simulated money cannot be completed",
+      "description": "A customer cannot complete a transfer of simulated money.",
+      "related_fr": "FR-007",
+      "source_business_requirement": "BR-007",
+      "severity": "UNSPECIFIED",
+      "condition": "A simulated transfer cannot be completed (for example, blocked by account state or unresolved limits).",
+      "expected_behavior": "The system shall surface a relevant error to the customer.",
+      "notes": "Exact transfer/payment rules and limits are unresolved (see OQ-007, OQ-012). Minimum balance and daily caps are open (see OQ-002, OQ-003)."
+    },
+    {
+      "id": "ERR-007",
+      "title": "Receipt of simulated money cannot be recorded",
+      "description": "Incoming simulated money cannot be recorded for a customer.",
+      "related_fr": "FR-008",
+      "source_business_requirement": "BR-008",
+      "severity": "UNSPECIFIED",
+      "condition": "A simulated receipt cannot be recorded.",
+      "expected_behavior": "The system shall surface a relevant error.",
+      "notes": "Exact transfer/payment rules and error text are unresolved (see OQ-007, OQ-012)."
+    },
+    {
+      "id": "ERR-008",
+      "title": "Statement cannot be presented or downloaded",
+      "description": "A customer cannot view or download a statement.",
+      "related_fr": "FR-009",
+      "source_business_requirement": "BR-009",
+      "severity": "UNSPECIFIED",
+      "condition": "A statement cannot be presented or downloaded.",
+      "expected_behavior": "The system shall surface a relevant error to the customer.",
+      "notes": "Statement content/download behaviour is unresolved (see OQ-008); error text is unresolved (see OQ-012). Relates to FR-010 for download behaviour."
+    },
+    {
+      "id": "ERR-009",
+      "title": "KYC review or status update fails",
+      "description": "Bank operations cannot review KYC or set KYC status.",
+      "related_fr": "FR-012",
+      "source_business_requirement": "BR-012",
+      "severity": "UNSPECIFIED",
+      "condition": "KYC review fails or a KYC status update cannot be recorded.",
+      "expected_behavior": "The system shall surface a relevant error to bank operations.",
+      "notes": "See also FR-011 for KYC review. Exact status values and error text are unresolved (see OQ-012, OQ-013)."
+    },
+    {
+      "id": "ERR-010",
+      "title": "Account activation or freeze fails",
+      "description": "Bank operations cannot activate or freeze a customer account.",
+      "related_fr": "FR-013",
+      "source_business_requirement": "BR-013",
+      "severity": "UNSPECIFIED",
+      "condition": "An account activation or freeze cannot be performed.",
+      "expected_behavior": "The system shall surface a relevant error to bank operations.",
+      "notes": "See also FR-014 for account freeze. Exact account-state rules and error text are unresolved (see OQ-006, OQ-012)."
+    },
+    {
+      "id": "ERR-011",
+      "title": "Customer account state cannot be viewed",
+      "description": "Bank operations cannot view a customer account's state.",
+      "related_fr": "FR-015",
+      "source_business_requirement": "BR-015",
+      "severity": "UNSPECIFIED",
+      "condition": "Account state cannot be presented to bank operations.",
+      "expected_behavior": "The system shall surface a relevant error to bank operations.",
+      "notes": "Exact error text is unresolved (see OQ-012)."
+    },
+    {
+      "id": "ERR-012",
+      "title": "Audit trail access fails",
+      "description": "Bank operations cannot access the audit trail.",
+      "related_fr": "FR-016",
+      "source_business_requirement": "BR-016",
+      "severity": "UNSPECIFIED",
+      "condition": "The audit trail cannot be accessed or returned.",
+      "expected_behavior": "The system shall surface a relevant error to bank operations.",
+      "notes": "Exact audit events are unresolved (see OQ-011); error text is unresolved (see OQ-012)."
+    },
+    {
+      "id": "ERR-013",
+      "title": "Bank-operations login fails",
+      "description": "Bank operations cannot log in.",
+      "related_fr": "FR-017",
+      "source_business_requirement": "BR-017",
+      "severity": "UNSPECIFIED",
+      "condition": "Bank-operations login fails, including invalid credentials or unauthorized access.",
+      "expected_behavior": "The system shall surface a relevant error to bank operations.",
+      "notes": "Exact authentication and authorization rules and error text are unresolved (see OQ-009, OQ-010, OQ-012)."
+    },
+    {
+      "id": "ERR-014",
+      "title": "Action not permitted by role",
+      "description": "A user attempts an action that is not permitted for their role.",
+      "related_fr": "FR-019",
+      "source_business_requirement": "BR-019",
+      "severity": "UNSPECIFIED",
+      "condition": "A user requests an action inconsistent with their role's permissions.",
+      "expected_behavior": "The system shall deny the action and surface a relevant error.",
+      "notes": "Exact role permissions and authorization rules are unresolved (see OQ-009); error text is unresolved (see OQ-012)."
+    },
+    {
+      "id": "ERR-015",
+      "title": "State change cannot be recorded for audit",
+      "description": "A state change cannot be recorded as an auditable event.",
+      "related_fr": "FR-020",
+      "source_business_requirement": "BR-020",
+      "severity": "UNSPECIFIED",
+      "condition": "An auditable state change cannot be recorded.",
+      "expected_behavior": "The system shall surface a relevant error and preserve auditable state-change behaviour.",
+      "notes": "Exact audit events are unresolved (see OQ-011); error text is unresolved (see OQ-012)."
+    },
+    {
+      "id": "ERR-016",
+      "title": "Logout cannot be completed",
+      "description": "A customer or bank-operations user cannot log out.",
+      "related_fr": "FR-006",
+      "source_business_requirement": "BR-006",
+      "severity": "UNSPECIFIED",
+      "condition": "Session termination cannot be completed for a customer or bank-operations user.",
+      "expected_behavior": "The system shall surface a relevant error.",
+      "notes": "Applies to FR-006 (customer) and FR-018 (bank operations). Exact error text is unresolved (see OQ-012)."
+    }
+  ],
+  "traceability": [
+    {
+      "error": "ERR-001",
+      "functional_requirement": "FR-001",
+      "business_requirement": "BR-001"
+    },
+    {
+      "error": "ERR-002",
+      "functional_requirement": "FR-002",
+      "business_requirement": "BR-002"
+    },
+    {
+      "error": "ERR-003",
+      "functional_requirement": "FR-003",
+      "business_requirement": "BR-003"
+    },
+    {
+      "error": "ERR-004",
+      "functional_requirement": "FR-004",
+      "business_requirement": "BR-004"
+    },
+    {
+      "error": "ERR-005",
+      "functional_requirement": "FR-005",
+      "business_requirement": "BR-005"
+    },
+    {
+      "error": "ERR-006",
+      "functional_requirement": "FR-007",
+      "business_requirement": "BR-007"
+    },
+    {
+      "error": "ERR-007",
+      "functional_requirement": "FR-008",
+      "business_requirement": "BR-008"
+    },
+    {
+      "error": "ERR-008",
+      "functional_requirement": "FR-009",
+      "business_requirement": "BR-009"
+    },
+    {
+      "error": "ERR-009",
+      "functional_requirement": "FR-012",
+      "business_requirement": "BR-012"
+    },
+    {
+      "error": "ERR-010",
+      "functional_requirement": "FR-013",
+      "business_requirement": "BR-013"
+    },
+    {
+      "error": "ERR-011",
+      "functional_requirement": "FR-015",
+      "business_requirement": "BR-015"
+    },
+    {
+      "error": "ERR-012",
+      "functional_requirement": "FR-016",
+      "business_requirement": "BR-016"
+    },
+    {
+      "error": "ERR-013",
+      "functional_requirement": "FR-017",
+      "business_requirement": "BR-017"
+    },
+    {
+      "error": "ERR-014",
+      "functional_requirement": "FR-019",
+      "business_requirement": "BR-019"
+    },
+    {
+      "error": "ERR-015",
+      "functional_requirement": "FR-020",
+      "business_requirement": "BR-020"
+    },
+    {
+      "error": "ERR-016",
+      "functional_requirement": "FR-006",
+      "business_requirement": "BR-006"
+    }
+  ],
+  "consistency_notes": [
+    "The BRD business-rule artifact and the BRD document both use the ID prefix BR- for business rules (BR-001..BR-008), which is distinct from but identical-in-prefix to the business-requirement IDs (BR-001..BR-023). The convention is preserved verbatim from the approved source; no rewrite was made.",
+    "All open questions OQ-001 through OQ-013 are carried forward from the BRD; none were silently resolved.",
+    "ERR-016 intentionally traces to FR-006 (source BR-006, customer logout), which is noted because it also covers FR-018 (bank-operations logout). This is an explicit consistency note, not an invented requirement.",
+    "No missing FR references were detected in the approved source material."
+  ]
+}
