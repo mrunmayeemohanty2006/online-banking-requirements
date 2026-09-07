@@ -1,0 +1,78 @@
+{
+  "artifact": "BUSINESS_RULES",
+  "artifact_name": "Business Rules",
+  "project": "Online Banking Application",
+  "version": "1.0",
+  "status": "RAW",
+  "ready_for_human_review": true,
+  "approval_status": "NOT_APPROVED",
+  "generated_at": "2026-09-07T00:00:00Z",
+  "generator_agent": "BRD Agent",
+  "source_basis": [
+    "sources/charter.md",
+    "sources/scope_agreement.md"
+  ],
+  "rules": [
+    {
+      "id": "BR-001",
+      "rule": "The simulation must not use real money; money movement is simulated using synthetic data.",
+      "source": [
+        "CHARTER-6",
+        "SCOPE-5"
+      ]
+    },
+    {
+      "id": "BR-002",
+      "rule": "The simulation must not perform real identity verification; Aadhaar/PAN verification is format-only and mocked.",
+      "source": [
+        "CHARTER-6",
+        "SCOPE-5"
+      ]
+    },
+    {
+      "id": "BR-003",
+      "rule": "The system must not perform credit decisioning, lending, or real financial transactions.",
+      "source": [
+        "CHARTER-6",
+        "SCOPE-5"
+      ]
+    },
+    {
+      "id": "BR-004",
+      "rule": "The system must not integrate with production banks, real payment gateways, or external KYC integrations.",
+      "source": [
+        "CHARTER-6",
+        "SCOPE-5"
+      ]
+    },
+    {
+      "id": "BR-005",
+      "rule": "The system supports two distinct roles: Customer and Bank Operations, with role-based access.",
+      "source": [
+        "CHARTER-3.2",
+        "SCOPE-3"
+      ]
+    },
+    {
+      "id": "BR-006",
+      "rule": "State changes in the system must be auditable.",
+      "source": [
+        "CHARTER-3.2"
+      ]
+    },
+    {
+      "id": "BR-007",
+      "rule": "Any requirement outside the approved scope must be handled through the project's change-control process rather than silently added to the baseline.",
+      "source": [
+        "SCOPE-8"
+      ]
+    },
+    {
+      "id": "BR-008",
+      "rule": "Every project handoff must carry version, source IDs, assumptions, open questions, and approval status.",
+      "source": [
+        "CHARTER-5"
+      ]
+    }
+  ]
+}

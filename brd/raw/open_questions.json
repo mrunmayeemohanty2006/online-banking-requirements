@@ -1,0 +1,126 @@
+{
+  "artifact": "OPEN_QUESTIONS",
+  "artifact_name": "Open Questions",
+  "project": "Online Banking Application",
+  "version": "1.0",
+  "status": "RAW",
+  "ready_for_human_review": true,
+  "approval_status": "NOT_APPROVED",
+  "generated_at": "2026-09-07T00:00:00Z",
+  "generator_agent": "BRD Agent",
+  "source_basis": [
+    "sources/charter.md",
+    "sources/scope_agreement.md"
+  ],
+  "questions": [
+    {
+      "id": "OQ-001",
+      "question": "Who executes UAT and signs off business acceptance?",
+      "status": "OPEN",
+      "source": [
+        "CHARTER-8",
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-002",
+      "question": "What is the minimum balance value?",
+      "status": "OPEN",
+      "source": [
+        "CHARTER-8",
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-003",
+      "question": "What is the daily transfer cap?",
+      "status": "OPEN",
+      "source": [
+        "CHARTER-8",
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-004",
+      "question": "Is the data-testid convention confirmed with the development team?",
+      "status": "OPEN",
+      "source": [
+        "AGENTS (Open Questions)"
+      ]
+    },
+    {
+      "id": "OQ-005",
+      "question": "What are the exact onboarding workflow and validation rules?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-006",
+      "question": "What are the exact account operations and account-state rules?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-007",
+      "question": "What are the exact transfer/payment rules and limits?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-008",
+      "question": "What are the statement content and download behaviour details?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-009",
+      "question": "What are the exact role permissions and authorization rules?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-3",
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-010",
+      "question": "What are the detailed security, privacy, accessibility, and testability requirements?",
+      "status": "OPEN",
+      "source": [
+        "CHARTER-8",
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-011",
+      "question": "What are the exact audit events to be recorded?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-012",
+      "question": "What are the error codes and error messages?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    },
+    {
+      "id": "OQ-013",
+      "question": "What are the data fields and validation constraints?",
+      "status": "OPEN",
+      "source": [
+        "SCOPE-7"
+      ]
+    }
+  ]
+}
