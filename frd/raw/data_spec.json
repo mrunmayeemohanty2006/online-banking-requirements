@@ -1,0 +1,265 @@
+{
+  "project": "Online Banking Application",
+  "project_code": "ONLINE-BANKING",
+  "artifact": "DATA_SPEC",
+  "version": "1.0",
+  "status": "RAW",
+  "ready_for_human_review": true,
+  "approval_status": "NOT_APPROVED",
+  "generated_at": "2026-09-07T00:00:00Z",
+  "generator_agent": "FRD Agent",
+  "source_basis": [
+    "brd/raw/brd.json",
+    "brd/raw/business_rules.json",
+    "brd/raw/open_questions.json"
+  ],
+  "artifact_name": "Data Specification",
+  "document_status_note": "RAW - READY_FOR_HUMAN_REVIEW",
+  "introduction": {
+    "purpose": "This Data Specification describes the business/functional data used by the Online Banking Application as required by the FRD.",
+    "scope": "This specification is not a database schema. It describes functional/business data and names no tables, columns, indexes, databases, or implementation architecture.",
+    "audience": [
+      "Architecture and Development teams",
+      "Quality Assurance and Testing teams",
+      "Human reviewers and approvers of functional requirements"
+    ]
+  },
+  "data_entries": [
+    {
+      "id": "DS-001",
+      "title": "Customer Profile",
+      "description": "Business/functional identity data for a customer using the simulation.",
+      "purpose": "Supports onboarding and identifies the customer across journeys.",
+      "related_frs": [
+        "FR-001"
+      ],
+      "notes": "Exact fields and validation constraints are unresolved (see OQ-013). Identity data is synthetic (see FR-021)."
+    },
+    {
+      "id": "DS-002",
+      "title": "KYC Information",
+      "description": "KYC information supplied by the customer during onboarding.",
+      "purpose": "Supports KYC capture and bank-operations review (see FR-002, FR-011, FR-012).",
+      "related_frs": [
+        "FR-002",
+        "FR-011",
+        "FR-012"
+      ],
+      "notes": "KYC is captured for the simulation and is subject to no real verification (constraint CON-003). Exact fields and validation constraints are unresolved (see OQ-013)."
+    },
+    {
+      "id": "DS-003",
+      "title": "Aadhaar/PAN Information",
+      "description": "Aadhaar and PAN details provided by the customer, verified format-only and mocked.",
+      "purpose": "Supports capture of Aadhaar/PAN details without real identity verification.",
+      "related_frs": [
+        "FR-003"
+      ],
+      "notes": "Verification is format-only and mocked (CON-003, business rule BR-002). Exact fields and format rules are unresolved (see OQ-013)."
+    },
+    {
+      "id": "DS-004",
+      "title": "Account Data",
+      "description": "Customer account information used in the simulation.",
+      "purpose": "Supports account activation, transfers, and statement journeys.",
+      "related_frs": [
+        "FR-004",
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-013",
+        "FR-014",
+        "FR-015"
+      ],
+      "notes": "Accounts are synthetic (see FR-021). Exact account data fields and account-state rules are unresolved (see OQ-006, OQ-013)."
+    },
+    {
+      "id": "DS-005",
+      "title": "Account State",
+      "description": "The state of a customer account (for example, active or frozen) as used by bank operations and customers.",
+      "purpose": "Supports account activation/freezing, transfers, and state visibility.",
+      "related_frs": [
+        "FR-004",
+        "FR-007",
+        "FR-008",
+        "FR-013",
+        "FR-014",
+        "FR-015",
+        "FR-020"
+      ],
+      "notes": "Exact account-state values and rules are unresolved (see OQ-006). State changes must be auditable (see FR-020)."
+    },
+    {
+      "id": "DS-006",
+      "title": "Balance Data",
+      "description": "Synthetic balance information associated with a customer account.",
+      "purpose": "Supports simulated transfer and receipt of money and balance visibility.",
+      "related_frs": [
+        "FR-007",
+        "FR-008"
+      ],
+      "notes": "Balances are synthetic (see FR-021). Minimum balance and transfer-related limits are unresolved (see OQ-002, OQ-007)."
+    },
+    {
+      "id": "DS-007",
+      "title": "Beneficiary Data",
+      "description": "Beneficiary information used in the simulation.",
+      "purpose": "Supports transfer of simulated money.",
+      "related_frs": [
+        "FR-007",
+        "FR-021"
+      ],
+      "notes": "Beneficiaries are synthetic (see FR-021). Beneficiary management itself is out of scope per the BRD; only the synthetic data used by the simulation is described."
+    },
+    {
+      "id": "DS-008",
+      "title": "Payment/Transfer Data",
+      "description": "Records of simulated payments/transfers of money.",
+      "purpose": "Supports transfer and receipt of simulated money and statement generation.",
+      "related_frs": [
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010",
+        "FR-021"
+      ],
+      "notes": "Payments are synthetic (see FR-021); real money movement is not permitted (CON-002). Exact transfer/payment rules and limits are unresolved (see OQ-007, OQ-013)."
+    },
+    {
+      "id": "DS-009",
+      "title": "Statement Data",
+      "description": "Data needed to present and download customer statements.",
+      "purpose": "Supports customer statement viewing and download.",
+      "related_frs": [
+        "FR-009",
+        "FR-010"
+      ],
+      "notes": "Exact statement content and download behaviour are unresolved (see OQ-008)."
+    },
+    {
+      "id": "DS-010",
+      "title": "Role and Access Data",
+      "description": "Data representing the two roles (Customer and Bank Operations) and the actions permitted per role.",
+      "purpose": "Supports role-based access requirements.",
+      "related_frs": [
+        "FR-005",
+        "FR-011",
+        "FR-017",
+        "FR-019"
+      ],
+      "notes": "Exact role permissions and authorization rules are unresolved (see OQ-009)."
+    },
+    {
+      "id": "DS-011",
+      "title": "Audit Trail Data",
+      "description": "Records of auditable state changes in the simulation.",
+      "purpose": "Supports auditable state changes and bank-operations access to the audit trail.",
+      "related_frs": [
+        "FR-016",
+        "FR-020"
+      ],
+      "notes": "Exact audit events to be recorded are unresolved (see OQ-011)."
+    },
+    {
+      "id": "DS-012",
+      "title": "Session Data",
+      "description": "Data representing an authenticated session for a Customer or Bank Operations user.",
+      "purpose": "Supports login, logout, and role-based access.",
+      "related_frs": [
+        "FR-005",
+        "FR-006",
+        "FR-017",
+        "FR-018",
+        "FR-019"
+      ],
+      "notes": "Exact authentication and session rules are unresolved (see OQ-009, OQ-010)."
+    }
+  ],
+  "related_fr_coverage": {
+    "FR-001": [
+      "DS-001"
+    ],
+    "FR-002": [
+      "DS-002"
+    ],
+    "FR-011": [
+      "DS-002",
+      "DS-010"
+    ],
+    "FR-012": [
+      "DS-002"
+    ],
+    "FR-003": [
+      "DS-003"
+    ],
+    "FR-004": [
+      "DS-004",
+      "DS-005"
+    ],
+    "FR-007": [
+      "DS-004",
+      "DS-005",
+      "DS-006",
+      "DS-007",
+      "DS-008"
+    ],
+    "FR-008": [
+      "DS-004",
+      "DS-005",
+      "DS-006",
+      "DS-008"
+    ],
+    "FR-009": [
+      "DS-004",
+      "DS-008",
+      "DS-009"
+    ],
+    "FR-010": [
+      "DS-004",
+      "DS-008",
+      "DS-009"
+    ],
+    "FR-013": [
+      "DS-004",
+      "DS-005"
+    ],
+    "FR-014": [
+      "DS-004",
+      "DS-005"
+    ],
+    "FR-015": [
+      "DS-004",
+      "DS-005"
+    ],
+    "FR-020": [
+      "DS-005",
+      "DS-011"
+    ],
+    "FR-021": [
+      "DS-007",
+      "DS-008"
+    ],
+    "FR-005": [
+      "DS-010",
+      "DS-012"
+    ],
+    "FR-017": [
+      "DS-010",
+      "DS-012"
+    ],
+    "FR-019": [
+      "DS-010",
+      "DS-012"
+    ],
+    "FR-016": [
+      "DS-011"
+    ],
+    "FR-006": [
+      "DS-012"
+    ],
+    "FR-018": [
+      "DS-012"
+    ]
+  }
+}
