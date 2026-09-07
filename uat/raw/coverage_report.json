@@ -1,0 +1,179 @@
+{
+  "project": "Online Banking Application",
+  "version": "1.0",
+  "status": "RAW",
+  "approval_status": "NOT_APPROVED",
+  "generated_at": "2026-09-07T14:29:32.623565Z",
+  "summary": {
+    "total_functional_requirements": 23,
+    "covered": 23,
+    "partially_covered": 0,
+    "not_covered": 0,
+    "coverage_percentage": 100.0
+  },
+  "details": [
+    {
+      "fr_id": "FR-001",
+      "title": "Customer Completes Onboarding",
+      "acceptance_criteria_count": 3,
+      "uat_cases_count": 3,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-002",
+      "title": "Customer Provides KYC Information",
+      "acceptance_criteria_count": 2,
+      "uat_cases_count": 2,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-003",
+      "title": "Customer Provides Aadhaar and PAN Information",
+      "acceptance_criteria_count": 3,
+      "uat_cases_count": 3,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-004",
+      "title": "Customer Activates an Account",
+      "acceptance_criteria_count": 2,
+      "uat_cases_count": 2,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-005",
+      "title": "Customer Login",
+      "acceptance_criteria_count": 2,
+      "uat_cases_count": 2,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-006",
+      "title": "Customer Logout",
+      "acceptance_criteria_count": 2,
+      "uat_cases_count": 2,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-007",
+      "title": "Customer Transfers Simulated Money",
+      "acceptance_criteria_count": 2,
+      "uat_cases_count": 2,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-008",
+      "title": "Customer Receives Simulated Money",
+      "acceptance_criteria_count": 2,
+      "uat_cases_count": 2,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-009",
+      "title": "Customer Views Statements",
+      "acceptance_criteria_count": 1,
+      "uat_cases_count": 1,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-010",
+      "title": "Customer Downloads Statements",
+      "acceptance_criteria_count": 1,
+      "uat_cases_count": 1,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-011",
+      "title": "Bank Operations Reviews KYC",
+      "acceptance_criteria_count": 1,
+      "uat_cases_count": 1,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-012",
+      "title": "Bank Operations Sets KYC Status",
+      "acceptance_criteria_count": 1,
+      "uat_cases_count": 1,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-013",
+      "title": "Bank Operations Activates Customer Accounts",
+      "acceptance_criteria_count": 1,
+      "uat_cases_count": 1,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-014",
+      "title": "Bank Operations Freezes Customer Accounts",
+      "acceptance_criteria_count": 2,
+      "uat_cases_count": 2,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-015",
+      "title": "Bank Operations Views Customer Account State",
+      "acceptance_criteria_count": 1,
+      "uat_cases_count": 1,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-016",
+      "title": "Bank Operations Accesses the Audit Trail",
+      "acceptance_criteria_count": 1,
+      "uat_cases_count": 1,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-017",
+      "title": "Bank Operations Login",
+      "acceptance_criteria_count": 2,
+      "uat_cases_count": 2,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-018",
+      "title": "Bank Operations Logout",
+      "acceptance_criteria_count": 2,
+      "uat_cases_count": 2,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-019",
+      "title": "Role-Based Access",
+      "acceptance_criteria_count": 2,
+      "uat_cases_count": 2,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-020",
+      "title": "Auditable State Changes",
+      "acceptance_criteria_count": 1,
+      "uat_cases_count": 1,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-021",
+      "title": "Synthetic Data Simulation",
+      "acceptance_criteria_count": 2,
+      "uat_cases_count": 2,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-022",
+      "title": "Agent Artifact Quality",
+      "acceptance_criteria_count": 1,
+      "uat_cases_count": 1,
+      "coverage_status": "COVERED"
+    },
+    {
+      "fr_id": "FR-023",
+      "title": "Requirements Traceability",
+      "acceptance_criteria_count": 1,
+      "uat_cases_count": 1,
+      "coverage_status": "COVERED"
+    }
+  ],
+  "acceptance_criteria_total": 38,
+  "uat_cases_total": 38
+}

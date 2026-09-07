@@ -1,0 +1,884 @@
+{
+  "project": "Online Banking Application",
+  "artifact": "UAT_CASES",
+  "version": "1.0",
+  "status": "RAW",
+  "approval_status": "NOT_APPROVED",
+  "generated_at": "2026-09-07T14:29:32.624385Z",
+  "uat_cases": [
+    {
+      "id": "UAT-001",
+      "title": "UAT for Acceptance for Customer Completes Onboarding - 1",
+      "requirement_reference": "FR-001",
+      "acceptance_criteria_reference": "AC-001.1",
+      "objective": "Verify that: The system shall make available an onboarding journey to a customer.",
+      "preconditions": [
+        "A customer exists and has initiated the onboarding journey."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: A customer exists and has initiated the onboarding journey.",
+        "Step 2: Trigger the functional behavior: The customer initiates onboarding.",
+        "Step 3: Observe system response: The system shall make available an onboarding journey to a customer.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall make available an onboarding journey to a customer.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-002",
+      "title": "UAT for Acceptance for Customer Completes Onboarding - 2",
+      "requirement_reference": "FR-001",
+      "acceptance_criteria_reference": "AC-001.2",
+      "objective": "Verify that: The system shall accept the information required for onboarding.",
+      "preconditions": [
+        "A customer exists and has initiated the onboarding journey."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: A customer exists and has initiated the onboarding journey.",
+        "Step 2: Trigger the functional behavior: The customer initiates onboarding.",
+        "Step 3: Observe system response: The system shall accept the information required for onboarding.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall accept the information required for onboarding.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-003",
+      "title": "UAT for Acceptance for Customer Completes Onboarding - 3",
+      "requirement_reference": "FR-001",
+      "acceptance_criteria_reference": "AC-001.3",
+      "objective": "Verify that: The system shall allow the customer to complete the onboarding journey.",
+      "preconditions": [
+        "A customer exists and has initiated the onboarding journey."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: A customer exists and has initiated the onboarding journey.",
+        "Step 2: Trigger the functional behavior: The customer initiates onboarding.",
+        "Step 3: Observe system response: The system shall allow the customer to complete the onboarding journey.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow the customer to complete the onboarding journey.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-004",
+      "title": "UAT for Acceptance for Customer Provides KYC Information - 1",
+      "requirement_reference": "FR-002",
+      "acceptance_criteria_reference": "AC-002.1",
+      "objective": "Verify that: The system shall accept KYC information from the customer.",
+      "preconditions": [
+        "The customer is progressing through onboarding."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer is progressing through onboarding.",
+        "Step 2: Trigger the functional behavior: The customer provides KYC information.",
+        "Step 3: Observe system response: The system shall accept KYC information from the customer.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall accept KYC information from the customer.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-005",
+      "title": "UAT for Acceptance for Customer Provides KYC Information - 2",
+      "requirement_reference": "FR-002",
+      "acceptance_criteria_reference": "AC-002.2",
+      "objective": "Verify that: KYC information is captured for the simulation; it is not verified against any real authority.",
+      "preconditions": [
+        "The customer is progressing through onboarding."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer is progressing through onboarding.",
+        "Step 2: Trigger the functional behavior: The customer provides KYC information.",
+        "Step 3: Observe system response: KYC information is captured for the simulation; it is not verified against any real authority.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "KYC information is captured for the simulation; it is not verified against any real authority.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-006",
+      "title": "UAT for Acceptance for Customer Provides Aadhaar and PAN Information - 1",
+      "requirement_reference": "FR-003",
+      "acceptance_criteria_reference": "AC-003.1",
+      "objective": "Verify that: The system shall accept Aadhaar and PAN information from the customer.",
+      "preconditions": [
+        "The customer is providing KYC information during onboarding."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer is providing KYC information during onboarding.",
+        "Step 2: Trigger the functional behavior: The customer provides Aadhaar and/or PAN information.",
+        "Step 3: Observe system response: The system shall accept Aadhaar and PAN information from the customer.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall accept Aadhaar and PAN information from the customer.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-007",
+      "title": "UAT for Acceptance for Customer Provides Aadhaar and PAN Information - 2",
+      "requirement_reference": "FR-003",
+      "acceptance_criteria_reference": "AC-003.2",
+      "objective": "Verify that: Aadhaar/PAN verification performed by the system, if any, shall be format-only and mocked.",
+      "preconditions": [
+        "The customer is providing KYC information during onboarding."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer is providing KYC information during onboarding.",
+        "Step 2: Trigger the functional behavior: The customer provides Aadhaar and/or PAN information.",
+        "Step 3: Observe system response: Aadhaar/PAN verification performed by the system, if any, shall be format-only and mocked.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "Aadhaar/PAN verification performed by the system, if any, shall be format-only and mocked.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-008",
+      "title": "UAT for Acceptance for Customer Provides Aadhaar and PAN Information - 3",
+      "requirement_reference": "FR-003",
+      "acceptance_criteria_reference": "AC-003.3",
+      "objective": "Verify that: The system shall not perform real identity verification against any external authority.",
+      "preconditions": [
+        "The customer is providing KYC information during onboarding."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer is providing KYC information during onboarding.",
+        "Step 2: Trigger the functional behavior: The customer provides Aadhaar and/or PAN information.",
+        "Step 3: Observe system response: The system shall not perform real identity verification against any external authority.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall not perform real identity verification against any external authority.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-009",
+      "title": "UAT for Acceptance for Customer Activates an Account - 1",
+      "requirement_reference": "FR-004",
+      "acceptance_criteria_reference": "AC-004.1",
+      "objective": "Verify that: The system shall allow a customer account to be activated.",
+      "preconditions": [
+        "The customer has an account associated with their profile."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has an account associated with their profile.",
+        "Step 2: Trigger the functional behavior: The customer, or bank operations on the customer's behalf, initiates account activation.",
+        "Step 3: Observe system response: The system shall allow a customer account to be activated.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow a customer account to be activated.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-010",
+      "title": "UAT for Acceptance for Customer Activates an Account - 2",
+      "requirement_reference": "FR-004",
+      "acceptance_criteria_reference": "AC-004.2",
+      "objective": "Verify that: Account activation shall result in an account state that reflects the activation.",
+      "preconditions": [
+        "The customer has an account associated with their profile."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has an account associated with their profile.",
+        "Step 2: Trigger the functional behavior: The customer, or bank operations on the customer's behalf, initiates account activation.",
+        "Step 3: Observe system response: Account activation shall result in an account state that reflects the activation.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "Account activation shall result in an account state that reflects the activation.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-011",
+      "title": "UAT for Acceptance for Customer Login - 1",
+      "requirement_reference": "FR-005",
+      "acceptance_criteria_reference": "AC-005.1",
+      "objective": "Verify that: The system shall allow a customer to log in.",
+      "preconditions": [
+        "The customer has a registered identity in the system."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has a registered identity in the system.",
+        "Step 2: Trigger the functional behavior: The customer initiates login.",
+        "Step 3: Observe system response: The system shall allow a customer to log in.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow a customer to log in.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-012",
+      "title": "UAT for Acceptance for Customer Login - 2",
+      "requirement_reference": "FR-005",
+      "acceptance_criteria_reference": "AC-005.2",
+      "objective": "Verify that: Login shall provide the customer access consistent with role-based access requirements (see FR-019).",
+      "preconditions": [
+        "The customer has a registered identity in the system."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has a registered identity in the system.",
+        "Step 2: Trigger the functional behavior: The customer initiates login.",
+        "Step 3: Observe system response: Login shall provide the customer access consistent with role-based access requirements (see FR-019).",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "Login shall provide the customer access consistent with role-based access requirements (see FR-019).",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-013",
+      "title": "UAT for Acceptance for Customer Logout - 1",
+      "requirement_reference": "FR-006",
+      "acceptance_criteria_reference": "AC-006.1",
+      "objective": "Verify that: The system shall allow a customer to log out.",
+      "preconditions": [
+        "The customer has an active session."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has an active session.",
+        "Step 2: Trigger the functional behavior: The customer initiates logout.",
+        "Step 3: Observe system response: The system shall allow a customer to log out.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow a customer to log out.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-014",
+      "title": "UAT for Acceptance for Customer Logout - 2",
+      "requirement_reference": "FR-006",
+      "acceptance_criteria_reference": "AC-006.2",
+      "objective": "Verify that: Logout shall terminate the customer session.",
+      "preconditions": [
+        "The customer has an active session."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has an active session.",
+        "Step 2: Trigger the functional behavior: The customer initiates logout.",
+        "Step 3: Observe system response: Logout shall terminate the customer session.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "Logout shall terminate the customer session.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-015",
+      "title": "UAT for Acceptance for Customer Transfers Simulated Money - 1",
+      "requirement_reference": "FR-007",
+      "acceptance_criteria_reference": "AC-007.1",
+      "objective": "Verify that: The system shall allow a customer to initiate a transfer of simulated money.",
+      "preconditions": [
+        "The customer has an active session and an account in a state that permits transfer."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has an active session and an account in a state that permits transfer.",
+        "Step 2: Trigger the functional behavior: The customer initiates a transfer of simulated money.",
+        "Step 3: Observe system response: The system shall allow a customer to initiate a transfer of simulated money.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow a customer to initiate a transfer of simulated money.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-016",
+      "title": "UAT for Acceptance for Customer Transfers Simulated Money - 2",
+      "requirement_reference": "FR-007",
+      "acceptance_criteria_reference": "AC-007.2",
+      "objective": "Verify that: Money movement is simulated using synthetic data; no real money moves.",
+      "preconditions": [
+        "The customer has an active session and an account in a state that permits transfer."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has an active session and an account in a state that permits transfer.",
+        "Step 2: Trigger the functional behavior: The customer initiates a transfer of simulated money.",
+        "Step 3: Observe system response: Money movement is simulated using synthetic data; no real money moves.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "Money movement is simulated using synthetic data; no real money moves.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-017",
+      "title": "UAT for Acceptance for Customer Receives Simulated Money - 1",
+      "requirement_reference": "FR-008",
+      "acceptance_criteria_reference": "AC-008.1",
+      "objective": "Verify that: The system shall allow a customer to receive simulated money.",
+      "preconditions": [
+        "The customer has an account in a state that permits receipt."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has an account in a state that permits receipt.",
+        "Step 2: Trigger the functional behavior: Simulated money is received for the customer.",
+        "Step 3: Observe system response: The system shall allow a customer to receive simulated money.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow a customer to receive simulated money.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-018",
+      "title": "UAT for Acceptance for Customer Receives Simulated Money - 2",
+      "requirement_reference": "FR-008",
+      "acceptance_criteria_reference": "AC-008.2",
+      "objective": "Verify that: Money movement is simulated using synthetic data; no real money moves.",
+      "preconditions": [
+        "The customer has an account in a state that permits receipt."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has an account in a state that permits receipt.",
+        "Step 2: Trigger the functional behavior: Simulated money is received for the customer.",
+        "Step 3: Observe system response: Money movement is simulated using synthetic data; no real money moves.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "Money movement is simulated using synthetic data; no real money moves.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-019",
+      "title": "UAT for Acceptance for Customer Views Statements - 1",
+      "requirement_reference": "FR-009",
+      "acceptance_criteria_reference": "AC-009.1",
+      "objective": "Verify that: The system shall allow a customer to view statements.",
+      "preconditions": [
+        "The customer has an active session and an account with statement data."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has an active session and an account with statement data.",
+        "Step 2: Trigger the functional behavior: The customer requests to view a statement.",
+        "Step 3: Observe system response: The system shall allow a customer to view statements.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow a customer to view statements.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-020",
+      "title": "UAT for Acceptance for Customer Downloads Statements - 1",
+      "requirement_reference": "FR-010",
+      "acceptance_criteria_reference": "AC-010.1",
+      "objective": "Verify that: The system shall allow a customer to download statements.",
+      "preconditions": [
+        "The customer has an active session and an account with statement data."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The customer has an active session and an account with statement data.",
+        "Step 2: Trigger the functional behavior: The customer requests to download a statement.",
+        "Step 3: Observe system response: The system shall allow a customer to download statements.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow a customer to download statements.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-021",
+      "title": "UAT for Acceptance for Bank Operations Reviews KYC - 1",
+      "requirement_reference": "FR-011",
+      "acceptance_criteria_reference": "AC-011.1",
+      "objective": "Verify that: The system shall allow bank operations to review KYC information.",
+      "preconditions": [
+        "Bank operations has an active session and the required role-based access."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: Bank operations has an active session and the required role-based access.",
+        "Step 2: Trigger the functional behavior: Bank operations requests to review a customer's KYC information.",
+        "Step 3: Observe system response: The system shall allow bank operations to review KYC information.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow bank operations to review KYC information.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-022",
+      "title": "UAT for Acceptance for Bank Operations Sets KYC Status - 1",
+      "requirement_reference": "FR-012",
+      "acceptance_criteria_reference": "AC-012.1",
+      "objective": "Verify that: The system shall allow bank operations to set the KYC status of a customer.",
+      "preconditions": [
+        "Bank operations has an active session, the required role-based access, and has reviewed the KYC information."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: Bank operations has an active session, the required role-based access, and has reviewed the KYC information.",
+        "Step 2: Trigger the functional behavior: Bank operations sets the KYC status for a customer.",
+        "Step 3: Observe system response: The system shall allow bank operations to set the KYC status of a customer.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow bank operations to set the KYC status of a customer.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-023",
+      "title": "UAT for Acceptance for Bank Operations Activates Customer Accounts - 1",
+      "requirement_reference": "FR-013",
+      "acceptance_criteria_reference": "AC-013.1",
+      "objective": "Verify that: The system shall allow bank operations to activate a customer account.",
+      "preconditions": [
+        "Bank operations has an active session and the required role-based access."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: Bank operations has an active session and the required role-based access.",
+        "Step 2: Trigger the functional behavior: Bank operations initiates activation of a customer account.",
+        "Step 3: Observe system response: The system shall allow bank operations to activate a customer account.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow bank operations to activate a customer account.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-024",
+      "title": "UAT for Acceptance for Bank Operations Freezes Customer Accounts - 1",
+      "requirement_reference": "FR-014",
+      "acceptance_criteria_reference": "AC-014.1",
+      "objective": "Verify that: The system shall allow bank operations to freeze a customer account.",
+      "preconditions": [
+        "Bank operations has an active session and the required role-based access."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: Bank operations has an active session and the required role-based access.",
+        "Step 2: Trigger the functional behavior: Bank operations initiates a freeze of a customer account.",
+        "Step 3: Observe system response: The system shall allow bank operations to freeze a customer account.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow bank operations to freeze a customer account.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-025",
+      "title": "UAT for Acceptance for Bank Operations Freezes Customer Accounts - 2",
+      "requirement_reference": "FR-014",
+      "acceptance_criteria_reference": "AC-014.2",
+      "objective": "Verify that: A frozen account shall reflect the frozen state.",
+      "preconditions": [
+        "Bank operations has an active session and the required role-based access."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: Bank operations has an active session and the required role-based access.",
+        "Step 2: Trigger the functional behavior: Bank operations initiates a freeze of a customer account.",
+        "Step 3: Observe system response: A frozen account shall reflect the frozen state.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "A frozen account shall reflect the frozen state.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-026",
+      "title": "UAT for Acceptance for Bank Operations Views Customer Account State - 1",
+      "requirement_reference": "FR-015",
+      "acceptance_criteria_reference": "AC-015.1",
+      "objective": "Verify that: The system shall allow bank operations to view the state of a customer account.",
+      "preconditions": [
+        "Bank operations has an active session and the required role-based access."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: Bank operations has an active session and the required role-based access.",
+        "Step 2: Trigger the functional behavior: Bank operations requests to view a customer's account state.",
+        "Step 3: Observe system response: The system shall allow bank operations to view the state of a customer account.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow bank operations to view the state of a customer account.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-027",
+      "title": "UAT for Acceptance for Bank Operations Accesses the Audit Trail - 1",
+      "requirement_reference": "FR-016",
+      "acceptance_criteria_reference": "AC-016.1",
+      "objective": "Verify that: The system shall allow bank operations to access the audit trail.",
+      "preconditions": [
+        "Bank operations has an active session and the required role-based access."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: Bank operations has an active session and the required role-based access.",
+        "Step 2: Trigger the functional behavior: Bank operations requests access to the audit trail.",
+        "Step 3: Observe system response: The system shall allow bank operations to access the audit trail.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow bank operations to access the audit trail.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-028",
+      "title": "UAT for Acceptance for Bank Operations Login - 1",
+      "requirement_reference": "FR-017",
+      "acceptance_criteria_reference": "AC-017.1",
+      "objective": "Verify that: The system shall allow bank operations to log in.",
+      "preconditions": [
+        "Bank operations has a registered identity in the system."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: Bank operations has a registered identity in the system.",
+        "Step 2: Trigger the functional behavior: Bank operations initiates login.",
+        "Step 3: Observe system response: The system shall allow bank operations to log in.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow bank operations to log in.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-029",
+      "title": "UAT for Acceptance for Bank Operations Login - 2",
+      "requirement_reference": "FR-017",
+      "acceptance_criteria_reference": "AC-017.2",
+      "objective": "Verify that: Login shall provide bank operations access consistent with role-based access requirements (see FR-019).",
+      "preconditions": [
+        "Bank operations has a registered identity in the system."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: Bank operations has a registered identity in the system.",
+        "Step 2: Trigger the functional behavior: Bank operations initiates login.",
+        "Step 3: Observe system response: Login shall provide bank operations access consistent with role-based access requirements (see FR-019).",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "Login shall provide bank operations access consistent with role-based access requirements (see FR-019).",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-030",
+      "title": "UAT for Acceptance for Bank Operations Logout - 1",
+      "requirement_reference": "FR-018",
+      "acceptance_criteria_reference": "AC-018.1",
+      "objective": "Verify that: The system shall allow bank operations to log out.",
+      "preconditions": [
+        "Bank operations has an active session."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: Bank operations has an active session.",
+        "Step 2: Trigger the functional behavior: Bank operations initiates logout.",
+        "Step 3: Observe system response: The system shall allow bank operations to log out.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall allow bank operations to log out.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-031",
+      "title": "UAT for Acceptance for Bank Operations Logout - 2",
+      "requirement_reference": "FR-018",
+      "acceptance_criteria_reference": "AC-018.2",
+      "objective": "Verify that: Logout shall terminate the bank-operations session.",
+      "preconditions": [
+        "Bank operations has an active session."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: Bank operations has an active session.",
+        "Step 2: Trigger the functional behavior: Bank operations initiates logout.",
+        "Step 3: Observe system response: Logout shall terminate the bank-operations session.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "Logout shall terminate the bank-operations session.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-032",
+      "title": "UAT for Acceptance for Role-Based Access - 1",
+      "requirement_reference": "FR-019",
+      "acceptance_criteria_reference": "AC-019.1",
+      "objective": "Verify that: The system shall keep customer and bank-operations journeys distinct through role-based access.",
+      "preconditions": [
+        "The system has defined roles for Customer and Bank Operations."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The system has defined roles for Customer and Bank Operations.",
+        "Step 2: Trigger the functional behavior: A user (Customer or Bank Operations) attempts to perform an action in the system.",
+        "Step 3: Observe system response: The system shall keep customer and bank-operations journeys distinct through role-based access.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall keep customer and bank-operations journeys distinct through role-based access.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-033",
+      "title": "UAT for Acceptance for Role-Based Access - 2",
+      "requirement_reference": "FR-019",
+      "acceptance_criteria_reference": "AC-019.2",
+      "objective": "Verify that: Actions available to a user shall be consistent with the user's role.",
+      "preconditions": [
+        "The system has defined roles for Customer and Bank Operations."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The system has defined roles for Customer and Bank Operations.",
+        "Step 2: Trigger the functional behavior: A user (Customer or Bank Operations) attempts to perform an action in the system.",
+        "Step 3: Observe system response: Actions available to a user shall be consistent with the user's role.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "Actions available to a user shall be consistent with the user's role.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-034",
+      "title": "UAT for Acceptance for Auditable State Changes - 1",
+      "requirement_reference": "FR-020",
+      "acceptance_criteria_reference": "AC-020.1",
+      "objective": "Verify that: The system shall record state changes so that they are auditable.",
+      "preconditions": [
+        "A state change occurs in the system."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: A state change occurs in the system.",
+        "Step 2: Trigger the functional behavior: A state change is performed (for example, account activation, account freeze, or KYC status update).",
+        "Step 3: Observe system response: The system shall record state changes so that they are auditable.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall record state changes so that they are auditable.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-035",
+      "title": "UAT for Acceptance for Synthetic Data Simulation - 1",
+      "requirement_reference": "FR-021",
+      "acceptance_criteria_reference": "AC-021.1",
+      "objective": "Verify that: The system shall use synthetic identities, accounts, balances, beneficiaries, and payments.",
+      "preconditions": [
+        "The simulation operates with synthetic data."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The simulation operates with synthetic data.",
+        "Step 2: Trigger the functional behavior: The simulation instantiates identities, accounts, balances, beneficiaries, or payments.",
+        "Step 3: Observe system response: The system shall use synthetic identities, accounts, balances, beneficiaries, and payments.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall use synthetic identities, accounts, balances, beneficiaries, and payments.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-036",
+      "title": "UAT for Acceptance for Synthetic Data Simulation - 2",
+      "requirement_reference": "FR-021",
+      "acceptance_criteria_reference": "AC-021.2",
+      "objective": "Verify that: The system shall not use real money, real identity verification, or real banking integration.",
+      "preconditions": [
+        "The simulation operates with synthetic data."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: The simulation operates with synthetic data.",
+        "Step 2: Trigger the functional behavior: The simulation instantiates identities, accounts, balances, beneficiaries, or payments.",
+        "Step 3: Observe system response: The system shall not use real money, real identity verification, or real banking integration.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "The system shall not use real money, real identity verification, or real banking integration.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-037",
+      "title": "UAT for Acceptance for Agent Artifact Quality - 1",
+      "requirement_reference": "FR-022",
+      "acceptance_criteria_reference": "AC-022.1",
+      "objective": "Verify that: Agent-produced artifacts shall be reviewable, reproducible, schema-valid, source-linked, and subject to human approval.",
+      "preconditions": [
+        "An agent produces an artifact."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: An agent produces an artifact.",
+        "Step 2: Trigger the functional behavior: An agent produces or delivers an artifact.",
+        "Step 3: Observe system response: Agent-produced artifacts shall be reviewable, reproducible, schema-valid, source-linked, and subject to human approval.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "Agent-produced artifacts shall be reviewable, reproducible, schema-valid, source-linked, and subject to human approval.",
+      "result": "PENDING",
+      "status": "RAW"
+    },
+    {
+      "id": "UAT-038",
+      "title": "UAT for Acceptance for Requirements Traceability - 1",
+      "requirement_reference": "FR-023",
+      "acceptance_criteria_reference": "AC-023.1",
+      "objective": "Verify that: Approved business rules shall remain traceable through requirements, design, implementation, test, defect decision, and final evidence record.",
+      "preconditions": [
+        "BRD artifacts record source-to-requirement mappings."
+      ],
+      "test_data": {
+        "description": "Synthetic test data consistent with simulation constraints",
+        "notes": "All data must be synthetic; real money and real identity verification are prohibited."
+      },
+      "actions": [
+        "Step 1: Ensure preconditions are met: BRD artifacts record source-to-requirement mappings.",
+        "Step 2: Trigger the functional behavior: Downstream requirements or evidence are produced from business requirements.",
+        "Step 3: Observe system response: Approved business rules shall remain traceable through requirements, design, implementation, test, defect decision, and final evidence record.",
+        "Step 4: Verify the system behaves as expected."
+      ],
+      "expected_business_outcome": "Approved business rules shall remain traceable through requirements, design, implementation, test, defect decision, and final evidence record.",
+      "result": "PENDING",
+      "status": "RAW"
+    }
+  ]
+}

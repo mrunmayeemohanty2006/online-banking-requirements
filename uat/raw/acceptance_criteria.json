@@ -1,0 +1,390 @@
+{
+  "project": "Online Banking Application",
+  "artifact": "ACCEPTANCE_CRITERIA",
+  "version": "1.0",
+  "status": "RAW",
+  "approval_status": "NOT_APPROVED",
+  "generated_at": "2026-09-07T14:29:32.623883Z",
+  "acceptance_criteria": [
+    {
+      "id": "AC-001.1",
+      "title": "Acceptance for Customer Completes Onboarding - 1",
+      "description": "The system shall make available an onboarding journey to a customer.",
+      "source_fr": "FR-001",
+      "source_br": "BR-001",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall make available an onboarding journey to a customer."
+    },
+    {
+      "id": "AC-001.2",
+      "title": "Acceptance for Customer Completes Onboarding - 2",
+      "description": "The system shall accept the information required for onboarding.",
+      "source_fr": "FR-001",
+      "source_br": "BR-001",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall accept the information required for onboarding."
+    },
+    {
+      "id": "AC-001.3",
+      "title": "Acceptance for Customer Completes Onboarding - 3",
+      "description": "The system shall allow the customer to complete the onboarding journey.",
+      "source_fr": "FR-001",
+      "source_br": "BR-001",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow the customer to complete the onboarding journey."
+    },
+    {
+      "id": "AC-002.1",
+      "title": "Acceptance for Customer Provides KYC Information - 1",
+      "description": "The system shall accept KYC information from the customer.",
+      "source_fr": "FR-002",
+      "source_br": "BR-002",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall accept KYC information from the customer."
+    },
+    {
+      "id": "AC-002.2",
+      "title": "Acceptance for Customer Provides KYC Information - 2",
+      "description": "KYC information is captured for the simulation; it is not verified against any real authority.",
+      "source_fr": "FR-002",
+      "source_br": "BR-002",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: KYC information is captured for the simulation; it is not verified against any real authority."
+    },
+    {
+      "id": "AC-003.1",
+      "title": "Acceptance for Customer Provides Aadhaar and PAN Information - 1",
+      "description": "The system shall accept Aadhaar and PAN information from the customer.",
+      "source_fr": "FR-003",
+      "source_br": "BR-003",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall accept Aadhaar and PAN information from the customer."
+    },
+    {
+      "id": "AC-003.2",
+      "title": "Acceptance for Customer Provides Aadhaar and PAN Information - 2",
+      "description": "Aadhaar/PAN verification performed by the system, if any, shall be format-only and mocked.",
+      "source_fr": "FR-003",
+      "source_br": "BR-003",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: Aadhaar/PAN verification performed by the system, if any, shall be format-only and mocked."
+    },
+    {
+      "id": "AC-003.3",
+      "title": "Acceptance for Customer Provides Aadhaar and PAN Information - 3",
+      "description": "The system shall not perform real identity verification against any external authority.",
+      "source_fr": "FR-003",
+      "source_br": "BR-003",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall not perform real identity verification against any external authority."
+    },
+    {
+      "id": "AC-004.1",
+      "title": "Acceptance for Customer Activates an Account - 1",
+      "description": "The system shall allow a customer account to be activated.",
+      "source_fr": "FR-004",
+      "source_br": "BR-004",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow a customer account to be activated."
+    },
+    {
+      "id": "AC-004.2",
+      "title": "Acceptance for Customer Activates an Account - 2",
+      "description": "Account activation shall result in an account state that reflects the activation.",
+      "source_fr": "FR-004",
+      "source_br": "BR-004",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: Account activation shall result in an account state that reflects the activation."
+    },
+    {
+      "id": "AC-005.1",
+      "title": "Acceptance for Customer Login - 1",
+      "description": "The system shall allow a customer to log in.",
+      "source_fr": "FR-005",
+      "source_br": "BR-005",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow a customer to log in."
+    },
+    {
+      "id": "AC-005.2",
+      "title": "Acceptance for Customer Login - 2",
+      "description": "Login shall provide the customer access consistent with role-based access requirements (see FR-019).",
+      "source_fr": "FR-005",
+      "source_br": "BR-005",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: Login shall provide the customer access consistent with role-based access requirements (see FR-019)."
+    },
+    {
+      "id": "AC-006.1",
+      "title": "Acceptance for Customer Logout - 1",
+      "description": "The system shall allow a customer to log out.",
+      "source_fr": "FR-006",
+      "source_br": "BR-006",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow a customer to log out."
+    },
+    {
+      "id": "AC-006.2",
+      "title": "Acceptance for Customer Logout - 2",
+      "description": "Logout shall terminate the customer session.",
+      "source_fr": "FR-006",
+      "source_br": "BR-006",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: Logout shall terminate the customer session."
+    },
+    {
+      "id": "AC-007.1",
+      "title": "Acceptance for Customer Transfers Simulated Money - 1",
+      "description": "The system shall allow a customer to initiate a transfer of simulated money.",
+      "source_fr": "FR-007",
+      "source_br": "BR-007",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow a customer to initiate a transfer of simulated money."
+    },
+    {
+      "id": "AC-007.2",
+      "title": "Acceptance for Customer Transfers Simulated Money - 2",
+      "description": "Money movement is simulated using synthetic data; no real money moves.",
+      "source_fr": "FR-007",
+      "source_br": "BR-007",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: Money movement is simulated using synthetic data; no real money moves."
+    },
+    {
+      "id": "AC-008.1",
+      "title": "Acceptance for Customer Receives Simulated Money - 1",
+      "description": "The system shall allow a customer to receive simulated money.",
+      "source_fr": "FR-008",
+      "source_br": "BR-008",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow a customer to receive simulated money."
+    },
+    {
+      "id": "AC-008.2",
+      "title": "Acceptance for Customer Receives Simulated Money - 2",
+      "description": "Money movement is simulated using synthetic data; no real money moves.",
+      "source_fr": "FR-008",
+      "source_br": "BR-008",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: Money movement is simulated using synthetic data; no real money moves."
+    },
+    {
+      "id": "AC-009.1",
+      "title": "Acceptance for Customer Views Statements - 1",
+      "description": "The system shall allow a customer to view statements.",
+      "source_fr": "FR-009",
+      "source_br": "BR-009",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow a customer to view statements."
+    },
+    {
+      "id": "AC-010.1",
+      "title": "Acceptance for Customer Downloads Statements - 1",
+      "description": "The system shall allow a customer to download statements.",
+      "source_fr": "FR-010",
+      "source_br": "BR-010",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow a customer to download statements."
+    },
+    {
+      "id": "AC-011.1",
+      "title": "Acceptance for Bank Operations Reviews KYC - 1",
+      "description": "The system shall allow bank operations to review KYC information.",
+      "source_fr": "FR-011",
+      "source_br": "BR-011",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow bank operations to review KYC information."
+    },
+    {
+      "id": "AC-012.1",
+      "title": "Acceptance for Bank Operations Sets KYC Status - 1",
+      "description": "The system shall allow bank operations to set the KYC status of a customer.",
+      "source_fr": "FR-012",
+      "source_br": "BR-012",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow bank operations to set the KYC status of a customer."
+    },
+    {
+      "id": "AC-013.1",
+      "title": "Acceptance for Bank Operations Activates Customer Accounts - 1",
+      "description": "The system shall allow bank operations to activate a customer account.",
+      "source_fr": "FR-013",
+      "source_br": "BR-013",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow bank operations to activate a customer account."
+    },
+    {
+      "id": "AC-014.1",
+      "title": "Acceptance for Bank Operations Freezes Customer Accounts - 1",
+      "description": "The system shall allow bank operations to freeze a customer account.",
+      "source_fr": "FR-014",
+      "source_br": "BR-014",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow bank operations to freeze a customer account."
+    },
+    {
+      "id": "AC-014.2",
+      "title": "Acceptance for Bank Operations Freezes Customer Accounts - 2",
+      "description": "A frozen account shall reflect the frozen state.",
+      "source_fr": "FR-014",
+      "source_br": "BR-014",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: A frozen account shall reflect the frozen state."
+    },
+    {
+      "id": "AC-015.1",
+      "title": "Acceptance for Bank Operations Views Customer Account State - 1",
+      "description": "The system shall allow bank operations to view the state of a customer account.",
+      "source_fr": "FR-015",
+      "source_br": "BR-015",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow bank operations to view the state of a customer account."
+    },
+    {
+      "id": "AC-016.1",
+      "title": "Acceptance for Bank Operations Accesses the Audit Trail - 1",
+      "description": "The system shall allow bank operations to access the audit trail.",
+      "source_fr": "FR-016",
+      "source_br": "BR-016",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow bank operations to access the audit trail."
+    },
+    {
+      "id": "AC-017.1",
+      "title": "Acceptance for Bank Operations Login - 1",
+      "description": "The system shall allow bank operations to log in.",
+      "source_fr": "FR-017",
+      "source_br": "BR-017",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow bank operations to log in."
+    },
+    {
+      "id": "AC-017.2",
+      "title": "Acceptance for Bank Operations Login - 2",
+      "description": "Login shall provide bank operations access consistent with role-based access requirements (see FR-019).",
+      "source_fr": "FR-017",
+      "source_br": "BR-017",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: Login shall provide bank operations access consistent with role-based access requirements (see FR-019)."
+    },
+    {
+      "id": "AC-018.1",
+      "title": "Acceptance for Bank Operations Logout - 1",
+      "description": "The system shall allow bank operations to log out.",
+      "source_fr": "FR-018",
+      "source_br": "BR-018",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall allow bank operations to log out."
+    },
+    {
+      "id": "AC-018.2",
+      "title": "Acceptance for Bank Operations Logout - 2",
+      "description": "Logout shall terminate the bank-operations session.",
+      "source_fr": "FR-018",
+      "source_br": "BR-018",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: Logout shall terminate the bank-operations session."
+    },
+    {
+      "id": "AC-019.1",
+      "title": "Acceptance for Role-Based Access - 1",
+      "description": "The system shall keep customer and bank-operations journeys distinct through role-based access.",
+      "source_fr": "FR-019",
+      "source_br": "BR-019",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall keep customer and bank-operations journeys distinct through role-based access."
+    },
+    {
+      "id": "AC-019.2",
+      "title": "Acceptance for Role-Based Access - 2",
+      "description": "Actions available to a user shall be consistent with the user's role.",
+      "source_fr": "FR-019",
+      "source_br": "BR-019",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: Actions available to a user shall be consistent with the user's role."
+    },
+    {
+      "id": "AC-020.1",
+      "title": "Acceptance for Auditable State Changes - 1",
+      "description": "The system shall record state changes so that they are auditable.",
+      "source_fr": "FR-020",
+      "source_br": "BR-020",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall record state changes so that they are auditable."
+    },
+    {
+      "id": "AC-021.1",
+      "title": "Acceptance for Synthetic Data Simulation - 1",
+      "description": "The system shall use synthetic identities, accounts, balances, beneficiaries, and payments.",
+      "source_fr": "FR-021",
+      "source_br": "BR-021",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall use synthetic identities, accounts, balances, beneficiaries, and payments."
+    },
+    {
+      "id": "AC-021.2",
+      "title": "Acceptance for Synthetic Data Simulation - 2",
+      "description": "The system shall not use real money, real identity verification, or real banking integration.",
+      "source_fr": "FR-021",
+      "source_br": "BR-021",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: The system shall not use real money, real identity verification, or real banking integration."
+    },
+    {
+      "id": "AC-022.1",
+      "title": "Acceptance for Agent Artifact Quality - 1",
+      "description": "Agent-produced artifacts shall be reviewable, reproducible, schema-valid, source-linked, and subject to human approval.",
+      "source_fr": "FR-022",
+      "source_br": "BR-022",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: Agent-produced artifacts shall be reviewable, reproducible, schema-valid, source-linked, and subject to human approval."
+    },
+    {
+      "id": "AC-023.1",
+      "title": "Acceptance for Requirements Traceability - 1",
+      "description": "Approved business rules shall remain traceable through requirements, design, implementation, test, defect decision, and final evidence record.",
+      "source_fr": "FR-023",
+      "source_br": "BR-023",
+      "priority": "UNSPECIFIED",
+      "status": "RAW",
+      "acceptance_condition": "The system shall demonstrate: Approved business rules shall remain traceable through requirements, design, implementation, test, defect decision, and final evidence record."
+    }
+  ]
+}
