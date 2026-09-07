@@ -1,0 +1,163 @@
+{
+  "artifact": "DATA_SPEC",
+  "artifact_name": "Data Specification",
+  "project": "Online Banking Application",
+  "version": "1.0",
+  "status": "RAW",
+  "approval_status": "NOT_APPROVED",
+  "generated_at": "2026-09-07T00:00:00Z",
+  "generator_agent": "FRD Agent",
+  "note": "This Data Specification describes business/functional data required by the approved requirements. It is NOT a database schema. No tables, engines, indexes, ORM models, or infrastructure are specified.",
+  "data_entities": [
+    {
+      "id": "DS-001",
+      "entity": "Customer",
+      "purpose": "A customer actor within the simulation who completes onboarding, provides KYC, activates an account, logs in/out, transfers and receives simulated money, and views/downloads statements.",
+      "source_business_requirement": [
+        "BR-001",
+        "BR-002",
+        "BR-003",
+        "BR-004",
+        "BR-005",
+        "BR-006",
+        "BR-007",
+        "BR-008",
+        "BR-009",
+        "BR-010"
+      ],
+      "data_notes": "Represented using synthetic identity data (BR-021). Exact data fields and validation constraints remain OPEN (OQ-013).",
+      "traceability_fr": [
+        "FR-001",
+        "FR-002",
+        "FR-003",
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "FR-008",
+        "FR-009",
+        "FR-010"
+      ]
+    },
+    {
+      "id": "DS-002",
+      "entity": "KYC Information",
+      "purpose": "KYC information provided by the customer, including Aadhaar and PAN information that is format-only and mocked.",
+      "source_business_requirement": [
+        "BR-002",
+        "BR-003",
+        "BR-011",
+        "BR-012"
+      ],
+      "data_notes": "Aadhaar/PAN verification is format-only and mocked; no real identity verification is performed (BR-002). Exact data fields and validation constraints remain OPEN (OQ-013).",
+      "traceability_fr": [
+        "FR-002",
+        "FR-003",
+        "FR-011",
+        "FR-012"
+      ]
+    },
+    {
+      "id": "DS-003",
+      "entity": "Account",
+      "purpose": "A customer account that can be activated or frozen by the customer or bank operations, and whose state is viewable.",
+      "source_business_requirement": [
+        "BR-004",
+        "BR-013",
+        "BR-014",
+        "BR-015"
+      ],
+      "data_notes": "Account state changes are auditable (BR-006). Exact account-state rules remain OPEN (OQ-006).",
+      "traceability_fr": [
+        "FR-004",
+        "FR-013",
+        "FR-014",
+        "FR-015"
+      ]
+    },
+    {
+      "id": "DS-004",
+      "entity": "Simulated Balance",
+      "purpose": "Synthetic simulated balance associated with accounts within the simulation.",
+      "source_business_requirement": [
+        "BR-007",
+        "BR-008",
+        "BR-021"
+      ],
+      "data_notes": "Balances are simulated using synthetic data (BR-001, BR-021). Minimum balance value remains OPEN (OQ-002).",
+      "traceability_fr": [
+        "FR-007",
+        "FR-008",
+        "FR-021"
+      ]
+    },
+    {
+      "id": "DS-005",
+      "entity": "Beneficiary",
+      "purpose": "Synthetic beneficiary data used within the simulation for money movement.",
+      "source_business_requirement": [
+        "BR-021"
+      ],
+      "data_notes": "Beneficiaries are synthetic (BR-021). Beneficiary management is out of scope per the approved BRD scope of work.",
+      "traceability_fr": [
+        "FR-021"
+      ]
+    },
+    {
+      "id": "DS-006",
+      "entity": "Simulated Payment",
+      "purpose": "Synthetic simulated payment representing transfer/receipt of simulated money.",
+      "source_business_requirement": [
+        "BR-007",
+        "BR-008",
+        "BR-021"
+      ],
+      "data_notes": "Payments are simulated using synthetic data (BR-001, BR-021). Transfer/payment rules and limits remain OPEN (OQ-007, OQ-003).",
+      "traceability_fr": [
+        "FR-007",
+        "FR-008",
+        "FR-021"
+      ]
+    },
+    {
+      "id": "DS-007",
+      "entity": "Statement",
+      "purpose": "Statement data viewable and downloadable by the customer.",
+      "source_business_requirement": [
+        "BR-009",
+        "BR-010"
+      ],
+      "data_notes": "Statement content and download behaviour details remain OPEN (OQ-008).",
+      "traceability_fr": [
+        "FR-009",
+        "FR-010"
+      ]
+    },
+    {
+      "id": "DS-008",
+      "entity": "Audit Trail",
+      "purpose": "Record of auditable state changes accessible to bank operations.",
+      "source_business_requirement": [
+        "BR-016",
+        "BR-020"
+      ],
+      "data_notes": "State changes are auditable (BR-006). Exact audit events to be recorded remain OPEN (OQ-011).",
+      "traceability_fr": [
+        "FR-016",
+        "FR-020"
+      ]
+    },
+    {
+      "id": "DS-009",
+      "entity": "Role",
+      "purpose": "Roles (Customer and Bank Operations) used to keep journeys distinct via role-based access.",
+      "source_business_requirement": [
+        "BR-019"
+      ],
+      "data_notes": "Two distinct roles exist (BR-005 business rule). Exact role permissions and authorization rules remain OPEN (OQ-009).",
+      "traceability_fr": [
+        "FR-019"
+      ]
+    }
+  ]
+}
